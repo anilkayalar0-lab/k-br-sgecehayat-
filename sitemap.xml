@@ -5,12 +5,12 @@
 >
   <!-- Ana sayfa ve öne çıkan görsel bilgisi. -->
   <url>
-    <loc>https://www.kibrisgecehayati.com/</loc>
+    <loc>https://anilkayalar0-lab.github.io/k-br-sgecehayat-/</loc>
     <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.kibrisgecehayati.com/images/slider/gece-1.jpg</image:loc>
+      <image:loc>https://anilkayalar0-lab.github.io/k-br-sgecehayat-/images/slider/gece-1.jpg</image:loc>
       <image:title>Kıbrıs Gece Hayatı</image:title>
     </image:image>
   </url>

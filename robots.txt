@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Site haritası, Google ve diğer arama motorlarının ana adresi daha kolay bulmasını sağlar.
-Sitemap: https://www.kibrisgecehayati.com/sitemap.xml
+Sitemap: https://anilkayalar0-lab.github.io/k-br-sgecehayat-/sitemap.xml
