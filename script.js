@@ -5,71 +5,90 @@ document.addEventListener("DOMContentLoaded", () => {
   const dots = Array.from(document.querySelectorAll(".slider-dot"));
   const previousButton = document.querySelector(".slider-prev");
   const nextButton = document.querySelector(".slider-next");
+  const menuLinks = Array.from(document.querySelectorAll(".menu a[href^='#']"));
 
   // Slider bulunamazsa kod sessizce durur; diğer sayfa içerikleri etkilenmez.
-  if (!slider || slides.length === 0) {
-    return;
-  }
+  if (slider && slides.length > 0) {
+    let currentSlide = 0;
+    let automaticSlider;
 
-  let currentSlide = 0;
-  let automaticSlider;
+    function showSlide(index) {
+      // Önce aktif görsel ve nokta temizlenir.
+      slides[currentSlide].classList.remove("active");
 
-  function showSlide(index) {
-    // Önce aktif görsel ve nokta temizlenir.
-    slides[currentSlide].classList.remove("active");
+      if (dots[currentSlide]) {
+        dots[currentSlide].classList.remove("active");
+      }
 
-    if (dots[currentSlide]) {
-      dots[currentSlide].classList.remove("active");
+      currentSlide = (index + slides.length) % slides.length;
+
+      // Yeni görsel ve ona ait nokta aktif hale getirilir.
+      slides[currentSlide].classList.add("active");
+
+      if (dots[currentSlide]) {
+        dots[currentSlide].classList.add("active");
+      }
     }
 
-    currentSlide = (index + slides.length) % slides.length;
-
-    // Yeni görsel ve ona ait nokta aktif hale getirilir.
-    slides[currentSlide].classList.add("active");
-
-    if (dots[currentSlide]) {
-      dots[currentSlide].classList.add("active");
+    function nextSlide() {
+      showSlide(currentSlide + 1);
     }
-  }
 
-  function nextSlide() {
-    showSlide(currentSlide + 1);
-  }
+    function previousSlide() {
+      showSlide(currentSlide - 1);
+    }
 
-  function previousSlide() {
-    showSlide(currentSlide - 1);
-  }
+    function startAutomaticSlider() {
+      // Tekrarlanan sayaç oluşmaması için önce mevcut otomatik geçiş temizlenir.
+      clearInterval(automaticSlider);
+      automaticSlider = setInterval(nextSlide, 4500);
+    }
 
-  function startAutomaticSlider() {
-    // Tekrarlanan sayaç oluşmaması için önce mevcut otomatik geçiş temizlenir.
-    clearInterval(automaticSlider);
-    automaticSlider = setInterval(nextSlide, 4500);
-  }
-
-  // Kullanıcı manuel geçiş yaptığında otomatik süre yeniden başlar.
-  nextButton?.addEventListener("click", () => {
-    nextSlide();
-    startAutomaticSlider();
-  });
-
-  previousButton?.addEventListener("click", () => {
-    previousSlide();
-    startAutomaticSlider();
-  });
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      showSlide(index);
+    // Kullanıcı manuel geçiş yaptığında otomatik süre yeniden başlar.
+    nextButton?.addEventListener("click", () => {
+      nextSlide();
       startAutomaticSlider();
     });
-  });
 
-  // Fare slider üzerindeyken görsel sabit kalır; ayrılınca otomatik geçiş devam eder.
-  slider.addEventListener("mouseenter", () => {
-    clearInterval(automaticSlider);
-  });
+    previousButton?.addEventListener("click", () => {
+      previousSlide();
+      startAutomaticSlider();
+    });
 
-  slider.addEventListener("mouseleave", startAutomaticSlider);
+    dots.forEach((dot, index) => {
+      dot.addEventListener("click", () => {
+        showSlide(index);
+        startAutomaticSlider();
+      });
+    });
 
-  startAutomaticSlider();
+    // Fare slider üzerindeyken görsel sabit kalır; ayrılınca otomatik geçiş devam eder.
+    slider.addEventListener("mouseenter", () => {
+      clearInterval(automaticSlider);
+    });
+
+    slider.addEventListener("mouseleave", startAutomaticSlider);
+
+    startAutomaticSlider();
+  }
+
+  function updateActiveMenu() {
+    const currentSection = menuLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean)
+      .reduce((activeSection, section) => {
+        return section.getBoundingClientRect().top <= 160 ? section : activeSection;
+      }, document.querySelector("#anasayfa"));
+
+    if (!currentSection) {
+      return;
+    }
+
+    menuLinks.forEach((link) => {
+      link.classList.toggle("active", link.getAttribute("href") === `#${currentSection.id}`);
+    });
+  }
+
+  updateActiveMenu();
+  window.addEventListener("scroll", updateActiveMenu, { passive: true });
 });

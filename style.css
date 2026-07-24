@@ -92,10 +92,12 @@ body {
 
 /* İlk ekran: güçlü başlık, kısa açıklama ve WhatsApp dönüşüm butonu. */
 .hero {
-  min-height: 78vh;
-  padding: 100px 8%;
+  min-height: 100vh;
+  padding: 0 8%;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
   background:
     linear-gradient(90deg, rgba(5, 5, 5, 0.96), rgba(5, 5, 5, 0.76)),
     radial-gradient(circle at 80% 30%, rgba(214, 0, 28, 0.42), transparent 34%),
@@ -104,45 +106,61 @@ body {
 }
 
 .hero-content {
-  max-width: 780px;
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+}
+
+.hero-slogan {
+  margin-bottom: 45px;
+  text-align: center;
 }
 
 .small-title {
-  color: #ff1234;
-  font-size: 15px;
-  font-weight: 900;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-}
-
-.hero h1 {
+  margin-top: 20px;
+  margin-bottom: 25px;
   color: #ffffff;
-  font-size: 72px;
-  line-height: 1.02;
-  margin-bottom: 22px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
-.hero p {
-  max-width: 670px;
+.hero-slogan h1 {
+  margin: 0 0 22px;
+  color: transparent;
+  font-size: clamp(56px, 5vw, 92px);
+  line-height: 1.05;
+  font-weight: 900;
+  -webkit-text-stroke: 2px #ffffff;
+  text-shadow:
+    0 0 18px rgba(255, 20, 50, 0.55),
+    0 0 35px rgba(255, 20, 50, 0.45);
+  text-transform: uppercase;
+}
+
+.hero-content > p:not(.small-title) {
+  max-width: 760px;
   color: #eeeeee;
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 1.7;
+  margin-bottom: 40px;
 }
 
 .hero-buttons {
   display: flex;
-  gap: 14px;
+  gap: 22px;
   flex-wrap: wrap;
 }
 
 .btn {
   min-height: 50px;
-  padding: 14px 24px;
+  padding: 18px 36px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 6px;
+  border-radius: 12px;
+  font-size: 22px;
   font-weight: 900;
   text-decoration: none;
   transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
@@ -549,7 +567,8 @@ body {
   margin-bottom: 34px;
 }
 
-.social-links a {
+.social-links a,
+.social-links span {
   width: 38px;
   height: 38px;
   border-radius: 50%;
@@ -643,12 +662,12 @@ footer {
   }
 
   .hero {
-    min-height: auto;
     padding: 78px 8%;
   }
 
-  .hero h1 {
+  .hero-slogan h1 {
     font-size: 48px;
+    -webkit-text-stroke: 1px #ffffff;
   }
 
   .stats,
@@ -710,41 +729,16 @@ footer {
   .menu {
     gap: 12px;
   }
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    padding-top:10vh;
-    overflow:hidden;
-}
 
-.hero-slogan{
-    width:100%;
-    max-width:1800px;
-    padding:0 6vw;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align:center;
-}
-
-.hero-slogan strong{
-    color:transparent;
-    -webkit-text-stroke:2px #fff;
-    font-size:clamp(52px,6vw,120px);
-    line-height:1.05;
-    text-shadow:0 0 30px rgba(255,18,52,.75);
-    margin-bottom:55px;   /* KIBRIS GECELERİ ile boşluk */
-}
-.hero-logo{
-    margin-top:20px;
-}
-  .hero h1 {
-    font-size: 38px;
+  .hero {
+    padding: 120px 24px 60px;
   }
 
-  .hero p,
+  .hero-slogan h1 {
+    font-size: 46px;
+  }
+
+  .hero-content > p:not(.small-title),
   .about-intro p,
   .about-text p,
   .about-text li,
@@ -763,325 +757,6 @@ footer {
   .text-box {
     padding: 24px;
   }
-}
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-slogan {
-    text-align: left;
-  }
-
-  .hero-slogan span {
-    font-size: 40px;
-  }
-
-  .hero-slogan strong {
-    font-size: 48px;
-  }
-
-  .hero-slogan em {
-    font-size: 52px;
-  }
-}
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-slogan {
-    text-align: left;
-    justify-self: stretch;
-    padding: 28px;
-  }
-
-  .hero-slogan span {
-    font-size: 48px;
-  }
-
-  .hero-slogan strong {
-    font-size: 25px;
-  }
-
-  .hero-slogan em {
-    width: 100%;
-    margin-left: 0;
-    font-size: 58px;
-  }
-}
-
-@media (max-width: 540px) {
-  .hero-slogan span {
-    font-size: 34px;
-  }
-
-  .hero-slogan strong {
-    font-size: 40px;
-    -webkit-text-stroke: 1px #ffffff;
-  }
-
-  .hero-slogan em {
-    font-size: 42px;
-  }
-}
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.hero-slogan {
-  width: 100%;
-  max-width: 1700px;
-  padding: 0 5vw;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero-slogan span,
-.hero-slogan strong,
-.hero-slogan em {
-  display: block;
-  line-height: .9;
-}
-
-.hero-slogan span {
-  color: #ff1234;
-  font-weight: 900;
-  font-size: clamp(42px, 5vw, 92px);
-  text-shadow: 0 0 25px rgba(255,18,52,.8);
-}
-
-.hero-slogan strong {
-  color: transparent;
-  -webkit-text-stroke: 2px #fff;
-  font-size: clamp(60px, 8vw, 170px);
-  text-shadow: 0 0 30px rgba(255,18,52,.7);
-}
-
-.hero-slogan em {
-  display: inline-block;
-  width: auto;
-  padding: .2em .5em;
-  color: #fff;
-  background: linear-gradient(135deg,#ff1234,#b00019,#5a000c);
-  border-radius: 12px;
-  font-style: normal;
-  font-size: clamp(56px,7vw,150px);
-  box-shadow: 0 0 30px rgba(255,18,52,.75);
-}
-
-@media (max-width: 900px) {
-
-  .hero-slogan{
-    padding:0 24px;
-  }
-
-  .hero-slogan span{
-    font-size:clamp(28px,6vw,48px);
-  }
-
-  .hero-slogan strong{
-    font-size:clamp(40px,9vw,72px);
-    -webkit-text-stroke:1px #fff;
-  }
-
-  .hero-slogan em{
-    font-size:clamp(36px,8vw,64px);
-    width:auto;
-  }
-
-
-  .hero-slogan {
-    justify-self: stretch;
-    text-align: left;
-    padding: 10px;
-  }
-
-  .hero-slogan span {
-    font-size: 48px;
-  }
-
-  .hero-slogan strong {
-    font-size: 10px;
-  }
-
-  .hero-slogan em {
-    width: 100%;
-    margin-left: 0;
-    font-size: 56px;
-  }
-}
-
-@media (max-width: 540px) {
-  .hero-slogan span {
-    font-size: 10px;
-  }
-
-  .hero-slogan strong {
-    font-size: 20px;
-    -webkit-text-stroke: 1px #ffffff;
-  }
-
-  .hero-slogan em {
-    font-size: 36px;
-  }
-}
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:0 8%;
-}
-
-.hero-content{
-    width:100%;
-    max-width:1350px;
-    margin:auto;
-}
-
-/* SLOGAN */
-
-.hero-slogan{
-    margin-bottom:45px;
-}
-
-.hero-slogan h1{
-
-    font-size:clamp(56px,5vw,92px);
-
-    line-height:1.05;
-
-    font-weight:900;
-
-    color:transparent;
-
-    -webkit-text-stroke:2px #ffffff;
-
-    text-shadow:
-        0 0 18px rgba(255,20,50,.55),
-        0 0 35px rgba(255,20,50,.45);
-
-}
-
-.hero-slogan span{
-
-    display:inline-block;
-
-    margin-top:18px;
-
-    color:#ff1234;
-
-    -webkit-text-stroke:0;
-
-    font-size:clamp(42px,4vw,70px);
-
-    text-shadow:
-        0 0 15px rgba(255,20,50,.9),
-        0 0 40px rgba(255,20,50,.7);
-
-}
-
-/* ALT YAZILAR */
-
-.small-title{
-
-    margin-top:20px;
-
-    margin-bottom:25px;
-
-    font-size:22px;
-
-    letter-spacing:0;
-
-    color:#ffffff;
-
-    font-weight:700;
-
-}
-
-.hero p{
-
-    max-width:760px;
-
-    font-size:24px;
-
-    line-height:1.7;
-
-    margin-bottom:40px;
-
-}
-
-/* BUTONLAR */
-
-.hero-buttons{
-
-    display:flex;
-
-    gap:22px;
-
-}
-
-.btn{
-
-    padding:18px 36px;
-
-    font-size:22px;
-
-    border-radius:12px;
-
-}
-
-/* MOBİL */
-
-@media(max-width:768px){
-
-.hero{
-
-    padding:120px 24px 60px;
-
-}
-
-.hero-slogan h1{
-
-    font-size:46px;
-
-    -webkit-text-stroke:1px #fff;
-
-}
-
-.hero-slogan span{
-
-    font-size:34px;
-
-}
-
-.hero p{
-
-    font-size:18px;
-
-}
-
-.hero-buttons{
-
-    flex-direction:column;
-
-}
-
-.btn{
-
-    width:100%;
-
-}
-
 }
 .floating-whatsapp {
   width: 92px;

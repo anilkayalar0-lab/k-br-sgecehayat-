@@ -1,20 +1,6 @@
-# Tüm arama motorları için kurallar
+# Arama motorlarının siteyi taramasına izin verir.
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
-Disallow: /*.json$
-Disallow: /cgi-bin/
 
-# Google Bot için özel kurallar
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Bing Bot için özel kurallar
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
-
-# Site haritası konumu
+# Site haritası, Google ve diğer arama motorlarının ana adresi daha kolay bulmasını sağlar.
 Sitemap: https://www.kibrisgecehayati.com/sitemap.xml
