@@ -1,0 +1,20 @@
+# Tüm arama motorları için kurallar
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /cgi-bin/
+
+# Google Bot için özel kurallar
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing Bot için özel kurallar
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Site haritası konumu
+Sitemap: https://www.kibrisgecehayati.com/sitemap.xml
