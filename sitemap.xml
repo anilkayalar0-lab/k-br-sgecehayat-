@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
->
-  <!-- Ana sayfa ve öne çıkan görsel bilgisi. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://anilkayalar0-lab.github.io/k-br-sgecehayat-/</loc>
     <lastmod>2026-07-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <image:image>
-      <image:loc>https://anilkayalar0-lab.github.io/k-br-sgecehayat-/images/slider/gece-1.jpg</image:loc>
-      <image:title>Kıbrıs Gece Hayatı</image:title>
-    </image:image>
   </url>
 </urlset>
