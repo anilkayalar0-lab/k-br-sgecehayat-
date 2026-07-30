@@ -17,5 +17,5 @@ Allow: /
 Crawl-delay: 1
 
 # Site haritası konumu
-Sitemap: https://kibriscatalog.com.tr/sitemap.xml
-Sitemap: https://kibriscatalog.com.tr/sitemap.txt
+Sitemap: https://xn--kbrscatalog-zzbc.com.tr/sitemap.xml
+Sitemap: https://xn--kbrscatalog-zzbc.com.tr/sitemap.txt

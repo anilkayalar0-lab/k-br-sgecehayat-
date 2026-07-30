@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Ana Sayfa -->
   <url>
-    <loc>https://kibriscatalog.com.tr/</loc>
+    <loc>https://xn--kbrscatalog-zzbc.com.tr/</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -10,9 +10,9 @@
   
   <!-- Görüntü Sitemap -->
   <url>
-    <loc>https://kibriscatalog.com.tr/</loc>
+    <loc>https://xn--kbrscatalog-zzbc.com.tr/</loc>
     <image:image>
-      <image:loc>https://kibriscatalog.com.tr/images/slider/gece-1.jpg</image:loc>
+      <image:loc>https://xn--kbrscatalog-zzbc.com.tr/images/slider/gece-1.jpg</image:loc>
       <image:title>Kıbrıs Gece Hayatı</image:title>
     </image:image>
   </url>
