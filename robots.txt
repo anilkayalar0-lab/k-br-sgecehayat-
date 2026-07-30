@@ -1,7 +1,21 @@
-# Arama motorlarının siteyi taramasına izin verir.
+# Tüm arama motorları için kurallar
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /cgi-bin/
 
-# Site haritası, Google ve diğer arama motorlarının ana adresi daha kolay bulmasını sağlar.
-Sitemap: https://anilkayalar0-lab.github.io/k-br-sgecehayat-/sitemap.xml
-Sitemap: https://anilkayalar0-lab.github.io/k-br-sgecehayat-/sitemap.txt
+# Google Bot için özel kurallar
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing Bot için özel kurallar
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Site haritası konumu
+Sitemap: https://kibriscatalog.com.tr/sitemap.xml
+Sitemap: https://kibriscatalog.com.tr/sitemap.txt
