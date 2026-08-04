@@ -277,6 +277,168 @@ body {
   color: #dddddd;
 }
 
+.guide-links-section {
+  background: #f7f7f7;
+}
+
+.guide-links-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.guide-link-card {
+  min-height: 230px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  color: #050505;
+  background: #ffffff;
+  border: 1px solid rgba(5, 5, 5, 0.12);
+  text-decoration: none;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.guide-link-card:hover,
+.guide-link-card:focus-visible {
+  border-color: #d6001c;
+  transform: translateY(-4px);
+}
+
+.guide-link-card span {
+  color: #d6001c;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.guide-link-card strong {
+  display: block;
+  margin: 18px 0 10px;
+  font-size: 23px;
+  line-height: 1.15;
+}
+
+.guide-link-card p {
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+.content-page {
+  background: #ffffff;
+  color: #050505;
+}
+
+.page-hero {
+  min-height: 560px;
+  padding: 120px 8% 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    linear-gradient(90deg, rgba(5, 5, 5, 0.96), rgba(5, 5, 5, 0.78)),
+    url("images/slider/gece-1.jpg") center/cover,
+    #050505;
+  color: #ffffff;
+}
+
+.page-hero p {
+  margin-bottom: 12px;
+  color: #ff1234;
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.page-hero h1 {
+  max-width: 980px;
+  margin-bottom: 22px;
+  font-size: clamp(44px, 6vw, 86px);
+  line-height: 1.02;
+  text-transform: uppercase;
+}
+
+.page-hero span {
+  max-width: 780px;
+  display: block;
+  margin-bottom: 34px;
+  color: #eeeeee;
+  font-size: 22px;
+}
+
+.page-hero .btn {
+  width: max-content;
+}
+
+.page-content {
+  padding: 70px 8% 95px;
+}
+
+.page-content article {
+  max-width: 980px;
+  margin-bottom: 42px;
+}
+
+.page-content h2 {
+  margin-bottom: 16px;
+  font-size: 36px;
+  line-height: 1.18;
+}
+
+.page-content p,
+.page-content li {
+  color: #333333;
+  font-size: 18px;
+}
+
+.page-content p {
+  margin-bottom: 16px;
+}
+
+.page-content ul {
+  margin: 18px 0 0 24px;
+}
+
+.page-content li {
+  margin-bottom: 8px;
+}
+
+.age-note {
+  padding: 14px 18px;
+  border-radius: 8px;
+  background: #f3f3f3;
+  border-left: 5px solid #d6001c;
+  font-weight: 700;
+}
+
+.topic-grid {
+  max-width: 980px;
+  margin: 34px 0 46px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.topic-grid a {
+  min-height: 64px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #111111;
+  border: 1px solid rgba(214, 0, 28, 0.6);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.topic-grid a:hover,
+.topic-grid a:focus-visible {
+  background: #d6001c;
+}
+
 .about-section {
   background: #080000;
   color: #ffffff;
@@ -672,6 +834,8 @@ footer {
 
   .stats,
   .cards,
+  .guide-links-grid,
+  .topic-grid,
   .about-intro,
   .about-stats {
     grid-template-columns: 1fr;
@@ -751,6 +915,19 @@ footer {
   }
 
   .btn {
+    width: 100%;
+  }
+
+  .page-hero {
+    min-height: 480px;
+    padding: 110px 24px 64px;
+  }
+
+  .page-hero span {
+    font-size: 18px;
+  }
+
+  .page-hero .btn {
     width: 100%;
   }
 
