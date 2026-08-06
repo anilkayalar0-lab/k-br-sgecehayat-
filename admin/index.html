@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' data:; script-src 'self'; style-src 'self'; form-action 'none'; upgrade-insecure-requests" />
+  <title>Kıbrıs Catalog Admin Merkezi</title>
+  <link rel="icon" href="../logo.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <div>
+        <p class="eyebrow">Kıbrıs Catalog</p>
+        <h1>Admin Merkezi</h1>
+        <span>Site, SEO, reklam ve güvenlik kontrolleri için tek ekran.</span>
+      </div>
+      <a class="primary-link" href="../index.html">Siteyi Aç</a>
+    </header>
+
+    <section class="notice">
+      <strong>Güvenlik notu</strong>
+      <p>
+        Bu panel gizli bilgi tutmaz ve site dosyalarını doğrudan değiştirmez.
+        Gerçek şifreli giriş için sıradaki adımda Cloudflare Access kuracağız.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="panel-card">
+        <span class="status good">Canlı</span>
+        <h2>Site Durumu</h2>
+        <p>Ana site, sitemap ve robots dosyalarını hızlı kontrol et.</p>
+        <div class="link-list">
+          <a href="https://kıbrıscatalog.com.tr" target="_blank" rel="noopener noreferrer">Ana site</a>
+          <a href="https://kıbrıscatalog.com.tr/sitemap.xml" target="_blank" rel="noopener noreferrer">Sitemap</a>
+          <a href="https://kıbrıscatalog.com.tr/robots.txt" target="_blank" rel="noopener noreferrer">Robots.txt</a>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <span class="status info">Yönetim</span>
+        <h2>Dış Paneller</h2>
+        <p>Günlük yönetim için kullandığımız servisler.</p>
+        <div class="link-list">
+          <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer">Google Search Console</a>
+          <a href="https://ads.google.com/" target="_blank" rel="noopener noreferrer">Google Ads</a>
+          <a href="https://uptimerobot.com/dashboard" target="_blank" rel="noopener noreferrer">UptimeRobot</a>
+          <a href="https://www.hosting.com.tr/clientarea.php" target="_blank" rel="noopener noreferrer">Hosting.com.tr Panel</a>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <span class="status warn">Sıradaki</span>
+        <h2>Güvenlik Kurulumu</h2>
+        <p>Şifreli admin kapısı için Cloudflare Access kullanacağız.</p>
+        <ol class="check-list">
+          <li>Cloudflare hesabı aç</li>
+          <li>Domaini Cloudflare'a ekle</li>
+          <li>DNS kayıtlarını kopyala</li>
+          <li><code>/admin/*</code> yolunu e-posta doğrulamasıyla koru</li>
+        </ol>
+      </article>
+
+      <article class="panel-card">
+        <span class="status good">SEO</span>
+        <h2>Hızlı Kopyala</h2>
+        <p>Kontrol ve reklam ekranlarında sık kullanılan değerler.</p>
+        <div class="copy-list">
+          <button type="button" data-copy="https://kıbrıscatalog.com.tr">Site URL</button>
+          <button type="button" data-copy="https://kıbrıscatalog.com.tr/sitemap.xml">Sitemap URL</button>
+          <button type="button" data-copy="+905488883786">Telefon</button>
+          <button type="button" data-copy="Kıbrıs gece hayatı, mekan bilgileri ve VIP transfer rehberi.">Reklam açıklaması</button>
+        </div>
+      </article>
+
+      <article class="panel-card wide">
+        <span class="status info">İş Akışı</span>
+        <h2>Güncelleme Akışı</h2>
+        <p>Yeni mekan, görsel veya metin değişikliği istediğinde güvenli sıra:</p>
+        <ol class="timeline">
+          <li>İçerik değişikliği lokal dosyalarda yapılır.</li>
+          <li>Sayfa ve sitemap kontrol edilir.</li>
+          <li>GitHub'a gönderilir ve canlı site kontrol edilir.</li>
+          <li>Search Console'da ilgili URL denetlenir.</li>
+        </ol>
+      </article>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
