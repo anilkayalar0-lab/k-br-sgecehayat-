@@ -277,6 +277,44 @@ body {
   color: #dddddd;
 }
 
+.faq-section {
+  padding: 82px 8%;
+  background: #ffffff;
+  color: #050505;
+}
+
+.faq-list {
+  max-width: 980px;
+}
+
+.faq-list details {
+  border-top: 1px solid #d8d8d8;
+}
+
+.faq-list details:last-child {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.faq-list summary {
+  padding: 22px 36px 22px 0;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.faq-list summary::marker {
+  color: #d6001c;
+}
+
+.faq-list p {
+  max-width: 820px;
+  padding: 0 36px 22px 0;
+  color: #393939;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
 .about-section {
   background: #080000;
   color: #ffffff;
@@ -680,6 +718,10 @@ footer {
   .section-heading h2,
   .contact h2 {
     font-size: 34px;
+  }
+
+  .faq-list summary {
+    font-size: 19px;
   }
 
   .about-hero {
