@@ -1,3 +1,8 @@
+if (window.location.hostname === "anilkayalar0-lab.github.io") {
+  const cleanPath = window.location.pathname.replace(/^\/k-br-sgecehayat-\/?/, "/");
+  window.location.replace(`https://xn--kbrscatalog-zzbc.com.tr${cleanPath}${window.location.search}${window.location.hash}`);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Slider elemanları sayfa yüklendikten sonra seçilir; böylece HTML hazır olmadan kod çalışmaz.
   const slider = document.querySelector(".about-slider");
