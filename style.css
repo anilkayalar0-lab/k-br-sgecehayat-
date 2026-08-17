@@ -727,7 +727,23 @@ footer {
   }
 
   .menu {
-    gap: 12px;
+    width: 100%;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+
+  .menu::-webkit-scrollbar {
+    display: none;
+  }
+
+  .menu a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 12px;
   }
 
   .hero {
