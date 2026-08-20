@@ -12,6 +12,7 @@ Guvenlik veya erisim sorunu fark ederseniz:
 
 ## Admin Notu
 
-`/admin/` altindaki panel gizli veri tutmayan bir yonetim merkezidir. Gercek
-sifreli giris Cloudflare Access gibi dis bir yetkilendirme katmaniyla
-yapilandirilmalidir.
+`/admin/` altindaki panel gizli veri tutmayan bir yonetim merkezidir.
+`/admin/*` yolu Cloudflare Access ile korunur ve yalnizca yetkili hesaplar
+tarafindan acilabilir. Bu katman kaldirilmamali veya giris bilgileri kaynak
+dosyalarina eklenmemelidir.
