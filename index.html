@@ -8,7 +8,7 @@
   <meta name="author" content="Kıbrıs Catalog" />
   <meta name="theme-color" content="#050505" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https: data:; script-src 'self'; style-src 'self'; connect-src 'self'; form-action 'none'; upgrade-insecure-requests" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; img-src 'self' https: data:; script-src 'self' https://www.googletagmanager.com; style-src 'self'; connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://stats.g.doubleclick.net; form-action 'none'; upgrade-insecure-requests" />
 
   <!-- Google sonuçlarında görünen başlık ve tercih edilen ana adres. -->
   <title>Kıbrıs Katalog | Kıbrıs Catalog Night Club Rehberi</title>
@@ -92,7 +92,9 @@
   </script>
 
   <link rel="stylesheet" href="style.css?v=20260817" />
-  <script src="script.js"></script>
+  <script src="google-ads-tracking.js" defer></script>
+  <script src="https://www.googletagmanager.com/gtag/js?id=AW-18372415580" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
   <!-- Üst menü, ziyaretçinin sayfadaki ana bölümlere hızlıca gitmesini sağlar. -->
