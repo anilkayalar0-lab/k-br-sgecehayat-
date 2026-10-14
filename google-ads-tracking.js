@@ -15,7 +15,7 @@ gtag("config", GOOGLE_ADS_TAG_ID);
 
 document.addEventListener("DOMContentLoaded", () => {
   const whatsappLinks = document.querySelectorAll(
-    "a[href*='wa.me/905488883786'], a[href*='api.whatsapp.com']"
+    "a[href*='wa.me/905391178491'], a[href*='api.whatsapp.com']"
   );
 
   whatsappLinks.forEach((link) => {
